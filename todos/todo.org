@@ -37,6 +37,21 @@
       DEADLINE: <2013-07-16 周二 17:00>
 ***** 实现”分类目录“界面（熊志军，黄彦培）
       DEADLINE: <2013-07-19 周五 17:00>
+* ZhaiRenHui
+** 开发
+*** TODO 手机点购系统[3/4]
+**** DONE 重构org.herod.order.web.buyer.BuyerPhoneService接口，将这个移动到herod-order工程中去。[/]
+     CLOSED: [2013-07-14 周日 12:40]
+     - State "DONE"       from "TODO"       [2013-07-14 周日 12:40]
+**** TODO 完成订单提交的功能
+**** DONE 重构下单界面
+     CLOSED: [2013-07-14 周日 13:36]
+     - State "DONE"       from "TODO"       [2013-07-14 周日 13:36]
+**** DONE 重构购物车界面
+     CLOSED: [2013-07-14 周日 13:37]
+     - State "DONE"       from "TODO"       [2013-07-14 周日 13:37]
+*** TODO 配送人员手持系统[/]
+*** TODO 后台管理系统[/]
 * 阅读、充电
 ** TODO 提高自己的时间管理能力，阅读《尽管去做——无压力工作的艺术》     :Easy:
    DEADLINE: <2013-07-14 周日>

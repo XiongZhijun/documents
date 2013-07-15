@@ -1,64 +1,119 @@
-** Mobi Platform
-*** 新需求[0/1]
-**** TODO [#C] 实现Pad应用程序后台静默升级[0/0]
-     SCHEDULED: <2013-07-15 周一>
- 1. 技术准备，网上调研静默升级方案
- 2. 验证技术方案
- 3. 实现并进行测试 
-*** Bug修改[2/3]
-**** TODO [#B] mobi-platform-ba-monitor的依赖关系有问题[/]
-     DEADLINE: <2013-07-15 周一>
-     mobi-platform-ba-monitor不应该依赖bd-order、bd-model、order-monitor。
-     这个需要找周冰华了解清楚！
-**** DONE [#A] 解决未发布商品出现在PAD上的问题[0/0]
-     CLOSED: [2013-07-13 周六 11:33]
-     - State "DONE"       from "TODO"       [2013-07-13 周六 11:33]
-**** DONE [#A] 解决三级目录出现在欢迎界面的问题[/]
-     DEADLINE: <2013-07-12 周五 16:00>
-     - State "DONE"       from "TODO"       [2013-07-12 周五 15:45]
- + 首先需要找到重现问题的方法
-   - 已经重现问题：从包含三级目录的商品选购界面进入到“历史订单”或者“购物车”界面，然后关闭屏幕，再开启屏幕就会导致三级目录显示在欢迎界面。
- + 定位出问题的所在
- + 解决问题
-*** Pad端重构[0/1]
-**** 工作 确认Pad端新原型[2/3]
-***** DONE 跟孙总讨论初步界面要求[/]
-      - State "DONE"       from "TODO"       [2013-07-12 周五 10:50]
-***** DONE 跟李建阳沟通界面需求[/]
-      - State "DONE"       from "TODO"       [2013-07-12 周五 10:50]
-***** 工作 绘制效果图[1/2]
-****** DONE 绘制历史订单效果图[/]
-       DEADLINE: <2013-07-12 周五 14:00>
+* FPI 工作
+** TODO 软件业务部上半年述职[0/3]
+*** TODO 跟孙总沟通，看需不需要参加[/]
+*** TODO 编写述职报告[/]
+    DEADLINE: <2013-07-18 周四>
+*** TODO 述职[/]
+    DEADLINE: <2013-07-22 周一>
+
+* Mobi Platform
+** 新需求[0/1]
+*** TODO [#C] 实现Pad应用程序后台静默升级[0/3]
+    SCHEDULED: <2013-07-15 周一>
+    - [ ] 技术准备，网上调研静默升级方案
+    - [ ] 验证技术方案
+    - [ ] 实现并进行测试 
+** Bug修改[0/3]
+*** TODO [#B] mobi-platform-ba-monitor的依赖关系有问题[/]
+    DEADLINE: <2013-07-19 周五>
+    mobi-platform-ba-monitor不应该依赖bd-order、bd-model、order-monitor。
+    周冰华本周五解决！
+*** TODO 解决三级目录在欢迎界面显示的问题[/]
+    SCHEDULED: <2013-07-16 周二>
+*** TODO 查找网络不好挂掉的问题[/]
+*** Archive							    :ARCHIVE:
+**** Archive							    :ARCHIVE:
+***** DONE [#A] 解决未发布商品出现在PAD上的问题[0/0]
+      CLOSED: [2013-07-13 周六 11:33]
+      - State "DONE"       from "TODO"       [2013-07-13 周六 11:33]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-15 周一 09:43
+      :END:
+***** DONE [#A] 解决三级目录出现在欢迎界面的问题[/]
+       DEADLINE: <2013-07-12 周五 16:00>
        - State "DONE"       from "TODO"       [2013-07-12 周五 15:45]
-****** TODO 绘制三级分类显示效果图[/]
-       DEADLINE: <2013-07-15 周一 12:00>
-***** 讨论界面效果图[/]
-***** 实现”历史订单“界面（黄彦培）
-      DEADLINE: <2013-07-16 周二 17:00>
-***** 实现”分类目录“界面（熊志军，黄彦培）
-      DEADLINE: <2013-07-19 周五 17:00>
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-15 周一 09:43
+      :END:
+   + 首先需要找到重现问题的方法
+     - 已经重现问题：从包含三级目录的商品选购界面进入到“历史订单”或者“购物车”界面，然后关闭屏幕，再开启屏幕就会导致三级目录显示在欢迎界面。
+   + 定位出问题的所在
+   + 解决问题
+** Pad端重构[0/1]
+*** 工作 确认Pad端新原型[2/3]
+**** DONE 跟孙总讨论初步界面要求[/]
+     - State "DONE"       from "TODO"       [2013-07-12 周五 10:50]
+**** DONE 跟李建阳沟通界面需求[/]
+     - State "DONE"       from "TODO"       [2013-07-12 周五 10:50]
+**** 工作 绘制效果图[2/2]
+***** DONE 绘制历史订单效果图[/]
+      DEADLINE: <2013-07-12 周五 14:00>
+      - State "DONE"       from "TODO"       [2013-07-12 周五 15:45]
+***** DONE 绘制三级分类显示效果图[/]
+      CLOSED: [2013-07-15 周一 16:19] DEADLINE: <2013-07-15 周一 12:00>
+      - State "DONE"       from "TODO"       [2013-07-15 周一 16:19]
+**** TODO 讨论界面效果图[/]
+     SCHEDULED: <2013-07-16 周二>
+     讨论需要跳出以前的那种分类框架，也要跳出以前那种一定要把分类显示在pad上的做法，要用更加先进方法来做。
+**** TODO 实现”历史订单“界面（黄彦培）
+     DEADLINE: <2013-07-16 周二 17:00>
+**** TODO 实现”分类目录“界面（熊志军，黄彦培）
+     DEADLINE: <2013-07-19 周五 17:00>
+** 其他工作
+*** Archive							    :ARCHIVE:
+**** DONE 找周冰华，让他在www服务器上部署一个测试环境		   :Delegate:
+     CLOSED: [2013-07-15 周一 13:41] DEADLINE: <2013-07-15 周一 14:00>
+     - State "DONE"       from "TODO"       [2013-07-15 周一 13:41]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-07-15 周一 13:42
+     :END:
+**** DONE 编写一份文档，说明Mobi Platform系统的内容
+     CLOSED: [2013-07-15 周一 16:18]
+     - State "DONE"       from "TODO"       [2013-07-15 周一 16:18]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-07-15 周一 16:18
+     :END:
+**** DONE 确认周冰华有部署好测试系统
+     CLOSED: [2013-07-15 周一 16:23] DEADLINE: <2013-07-15 周一 16:00>
+     - State "DONE"       from "TODO"       [2013-07-15 周一 16:23]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-07-15 周一 16:23
+     :END:
 * ZhaiRenHui
 ** 开发
 *** TODO 手机点购系统[3/4]
-**** DONE 重构org.herod.order.web.buyer.BuyerPhoneService接口，将这个移动到herod-order工程中去。[/]
-     CLOSED: [2013-07-14 周日 12:40]
-     - State "DONE"       from "TODO"       [2013-07-14 周日 12:40]
 **** TODO 完成订单提交的功能
-**** DONE 重构下单界面
-     CLOSED: [2013-07-14 周日 13:36]
-     - State "DONE"       from "TODO"       [2013-07-14 周日 13:36]
-**** DONE 重构购物车界面
-     CLOSED: [2013-07-14 周日 13:37]
-     - State "DONE"       from "TODO"       [2013-07-14 周日 13:37]
+**** Archive							    :ARCHIVE:
+***** DONE 重构org.herod.order.web.buyer.BuyerPhoneService接口，将这个移动到herod-order工程中去。[/]
+      CLOSED: [2013-07-14 周日 12:40]
+      - State "DONE"       from "TODO"       [2013-07-14 周日 12:40]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-15 周一 09:44
+      :END:
+***** DONE 重构下单界面
+      CLOSED: [2013-07-14 周日 13:36]
+      - State "DONE"       from "TODO"       [2013-07-14 周日 13:36]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-15 周一 09:44
+      :END:
+***** DONE 重构购物车界面
+      CLOSED: [2013-07-14 周日 13:37]
+      - State "DONE"       from "TODO"       [2013-07-14 周日 13:37]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-15 周一 09:44
+      :END:
 *** TODO 配送人员手持系统[/]
 *** TODO 后台管理系统[/]
 * 阅读、充电
 ** TODO 提高自己的时间管理能力，阅读《尽管去做——无压力工作的艺术》     :Easy:
-   DEADLINE: <2013-07-14 周日>
+   任务延时有两个原因：
+   1. 开发宅人汇去了；
+   2. 个人惰性，以后需要克服！
+   DEADLINE: <2013-07-16 周二>
 ** TODO 学会使用Emacs Org-Mode来进行GTD，首先要学习Org-Mode
 ** TODO 深入了解Git分布式版本管理系统，阅读《Pro.Git-zh_CN》
 * 购房
 ** TODO 房子过户
-
+   
 * DONE 测试
-
+  

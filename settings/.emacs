@@ -41,7 +41,7 @@
 ))
 
 ;; 如果子任务没有全部完成，主任务将不能设置为 DONE 状态
-(setq org-enforce-todo-dependencies 
+(setq org-enforce-todo-dependencies )
 
 ;;如果觉得通过设置TODO关键词方式记录的状态更改时间很烦人（每次修改都记录，即使误操作了也要手工删除），那你应该用 org-log-done 变量：
 (setq org-log-done 'time)
@@ -53,7 +53,19 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
 ;;Org虽然没有定义专门的日程表类型的文件，但要产生特定的日程表总不能天南海北的胡乱查找任务，所以要先指定一些（org）文件为搜索范围。这可以通过设置 org-agenda-files 变量完成
-(setq org-agenda-files (list "D:/xzj"))
+(setq org-agenda-files (list "D:/herod/git/documents/todos" "D:/herod/git/documents/notes"))
 
 ;;Org-mode产生日程表的快捷键默认不安装，得自己设置：
 (global-set-key "\C-ca" 'org-agenda)
+
+;;Org-mode remember
+(setq org-directory "d:/herod/git/documents/")
+(setq org-default-notes-file "d:/herod/git/documents/notes/.notes")
+(setq remember-annotation-functions '(org-remember-annotation))
+(setq remember-handler-functions '(org-remember-handler))
+(add-hook 'remember-mode-hook 'org-remember-apply-template)
+(define-key global-map "\C-cr" 'org-remember)
+(setq org-remember-templates
+     '(("Todo" ?t "* TODO %? %^g\n %i\n " "d:/herod/git/documents/notes/remember-todos.org" "Todo")
+      ("Idea" ?i "* TODO %? %^g\n %i\n " "d:/herod/git/documents/notes/remember-todos.org" "Idea")
+      ))

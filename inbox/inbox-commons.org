@@ -1,3 +1,3 @@
 * Common
-** TODO �ǵ����°�ǰ��.emacs��������������ύ��github��ȥ�������Ϳ����ڰ칫�Һͼ���ͬʱ����emacs���а칫�� :Study:
+** TODO 记得在下班前将.emacs里面的配置内容提交到github上去，这样就可以在办公室和家里同时利用emacs进行办公了 :Study:
 

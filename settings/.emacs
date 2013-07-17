@@ -25,9 +25,12 @@
 ;;(setq org-log-done 'note)
 
 ;;在Emacs配置文件中定义TODO关键词
+;;(setq org-todo-keywords
+;;  '((type "工作(w!)" "学习(s!)" "休闲(l!)" "|")
+;;    (sequence "PENDING(p!)" "TODO(t!)"  "|" "DONE(d!)" "ABORT(a@/!)")
+;;))
 (setq org-todo-keywords
-  '((type "工作(w!)" "学习(s!)" "休闲(l!)" "|")
-    (sequence "PENDING(p!)" "TODO(t!)"  "|" "DONE(d!)" "ABORT(a@/!)")
+  '((sequence "PENDING(p!)" "TODO(t!)"  "|" "DONE(d!)" "ABORT(a@/!)")
 ))
 ;; 改变TODO关键词的外观
 (setq org-todo-keyword-faces
@@ -53,7 +56,7 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
 ;;Org虽然没有定义专门的日程表类型的文件，但要产生特定的日程表总不能天南海北的胡乱查找任务，所以要先指定一些（org）文件为搜索范围。这可以通过设置 org-agenda-files 变量完成
-(setq org-agenda-files (list "D:/herod/git/documents/todos" "D:/herod/git/documents/notes"))
+(setq org-agenda-files (list "D:/herod/git/documents/todos" "D:/herod/git/documents/notes"  "D:/herod/git/documents/inbox"))
 
 ;;Org-mode产生日程表的快捷键默认不安装，得自己设置：
 (global-set-key "\C-ca" 'org-agenda)
@@ -66,6 +69,19 @@
 (add-hook 'remember-mode-hook 'org-remember-apply-template)
 (define-key global-map "\C-cr" 'org-remember)
 (setq org-remember-templates
-     '(("Todo" ?t "* TODO %? %^g\n %i\n " "d:/herod/git/documents/notes/remember-todos.org" "Todo")
-      ("Idea" ?i "* TODO %? %^g\n %i\n " "d:/herod/git/documents/notes/remember-todos.org" "Idea")
+     '(("Common" ?c "* TODO %? %^g\n %i\n " "d:/herod/git/documents/inbox/inbox-commons.org" "Common")
+      ("Work" ?w "* TODO %? %^g\n %i\n " "d:/herod/git/documents/inbox/inbox-works.org" "Work")
+      ("Idea" ?i "* TODO %? %^g\n %i\n " "d:/herod/git/documents/inbox/inbox-idea.org" "Idea")
+      ("Relaxation" ?r "* TODO %? %^g\n %i\n " "d:/herod/git/documents/inbox/inbox-relaxation.org" "Relaxation")
       ))
+
+;; 定义公共的Tags
+(setq org-tag-alist '(("Mobi" . ?m)
+                      ("Fpi" . ?f)
+                      ("Emacs" . ?e)
+                      ("Herod" . ?h)
+                      ("Relaxation" . ?r)
+                      ("Family" . ?a)
+                      ("Study" . ?s)
+                      ("Delegate" . ?d)
+))

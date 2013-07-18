@@ -1,0 +1,97 @@
+* 一些问题解决方案搜集
+** 后台静默安装升级apk的解决方案			:静默:升级:安装:apk:silent:
+*** 需要的前提条件
+    1. [ ] 应用必须经过系统签名文件进行签名，或者将应用安装到/system/app中
+    2. [ ] 应用必须授权：android.permission.INSTALL_PACKAGES
+    3. [ ] 系统签名需要下载源码从而获取到系统签名文件
+*** 静默升级安装apk的Java代码
+#+begin_src java
+public static String installInSilently(Context context, File file) {
+	String[] args = { "pm", "install", "-r", file.getAbsolutePath() };
+	String result = "";
+	ProcessBuilder processBuilder = new ProcessBuilder(args);
+	Process process = null;
+	InputStream errIs = null;
+	InputStream inIs = null;
+	try {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		int read = -1;
+		process = processBuilder.start();
+		errIs = process.getErrorStream();
+		while ((read = errIs.read()) != -1) {
+			baos.write(read);
+		}
+		baos.write('\n');
+		inIs = process.getInputStream();
+		while ((read = inIs.read()) != -1) {
+			baos.write(read);
+		}
+		byte[] data = baos.toByteArray();
+		result = new String(data);
+	} catch (Exception e) {
+		Toast.makeText(context, "应用程序升级失败！", Toast.LENGTH_LONG).show();
+	} finally {
+		try {
+			if (errIs != null) {
+				errIs.close();
+			}
+			if (inIs != null) {
+				inIs.close();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		if (process != null) {
+			process.destroy();
+		}
+	}
+	return result;
+}
+#+end_src 
+*** AndroidManifest.xml文件添加permission
+#+begin_src xml
+<uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+<uses-permission android:name="android.permission.DELETE_PACKAGES" />
+#+end_src
+*** 签名apk
+    1. 利用Eclipse打包无签名的apk：in.apk
+    2. 下载android系统源码
+    3. 从android-source\build\target\product\security目录下拷贝出platform.pk8、platform.x509.pem两个文件
+    4. 下载或者拷贝出signapk.jar文件
+    5. 用java -jar signapk.jar platform.x509.pem platform.pk8 in.apk output.apk
+    6. output.apk即是经过系统签名的apk
+*** 发布进行了系统签名的apk
+** 下载android源码
+可以利用下面的python脚本来下载android 源码
+#+begin_src python
+import xml.dom.minidom
+import os
+from subprocess import call
+
+#downloaded source path
+rootdir = "C:/android-source"
+
+#git program path
+git = "E:/Users/Xiong/AppData/Local/GitHub/PortableGit_015aa71ef18c047ce8509ffb2f9e4bb0e3e73f13/bin/git.exe"
+
+dom = xml.dom.minidom.parse("F:/cygwin/home/manifest/default.xml")
+root = dom.documentElement
+
+prefix = git + " clone https://android.googlesource.com/"
+suffix = ".git"
+
+if not os.path.exists(rootdir):
+    os.mkdir(rootdir)
+
+for node in root.getElementsByTagName("project"):
+    os.chdir(rootdir)
+    d = node.getAttribute("path")
+    last = d.rfind("/")
+    if last != -1:
+        d = rootdir + "/" + d[:last]
+        if not os.path.exists(d):
+            os.makedirs(d)
+        os.chdir(d)
+    cmd = prefix + node.getAttribute("name") + suffix
+    call(cmd)
+#+end_src

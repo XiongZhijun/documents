@@ -1,10 +1,10 @@
-* Ò»Ğ©ÎÊÌâ½â¾ö·½°¸ËÑ¼¯
-** ºóÌ¨¾²Ä¬°²×°Éı¼¶apkµÄ½â¾ö·½°¸			:¾²Ä¬:Éı¼¶:°²×°:apk:silent:
-*** ĞèÒªµÄÇ°ÌáÌõ¼ş
-    1. [ ] Ó¦ÓÃ±ØĞë¾­¹ıÏµÍ³Ç©ÃûÎÄ¼ş½øĞĞÇ©Ãû£¬»òÕß½«Ó¦ÓÃ°²×°µ½/system/appÖĞ
-    2. [ ] Ó¦ÓÃ±ØĞëÊÚÈ¨£ºandroid.permission.INSTALL_PACKAGES
-    3. [ ] ÏµÍ³Ç©ÃûĞèÒªÏÂÔØÔ´Âë´Ó¶ø»ñÈ¡µ½ÏµÍ³Ç©ÃûÎÄ¼ş
-*** ¾²Ä¬Éı¼¶°²×°apkµÄJava´úÂë
+* ä¸€äº›é—®é¢˜è§£å†³æ–¹æ¡ˆæœé›†
+** åå°é™é»˜å®‰è£…å‡çº§apkçš„è§£å†³æ–¹æ¡ˆ			:é™é»˜:å‡çº§:å®‰è£…:apk:silent:
+*** éœ€è¦çš„å‰ææ¡ä»¶
+    1. [ ] åº”ç”¨å¿…é¡»ç»è¿‡ç³»ç»Ÿç­¾åæ–‡ä»¶è¿›è¡Œç­¾åï¼Œæˆ–è€…å°†åº”ç”¨å®‰è£…åˆ°/system/appä¸­
+    2. [ ] åº”ç”¨å¿…é¡»æˆæƒï¼šandroid.permission.INSTALL_PACKAGES
+    3. [ ] ç³»ç»Ÿç­¾åéœ€è¦ä¸‹è½½æºç ä»è€Œè·å–åˆ°ç³»ç»Ÿç­¾åæ–‡ä»¶
+*** é™é»˜å‡çº§å®‰è£…apkçš„Javaä»£ç 
 #+begin_src java
 public static String installInSilently(Context context, File file) {
 	String[] args = { "pm", "install", "-r", file.getAbsolutePath() };
@@ -29,7 +29,7 @@ public static String installInSilently(Context context, File file) {
 		byte[] data = baos.toByteArray();
 		result = new String(data);
 	} catch (Exception e) {
-		Toast.makeText(context, "Ó¦ÓÃ³ÌĞòÉı¼¶Ê§°Ü£¡", Toast.LENGTH_LONG).show();
+		Toast.makeText(context, "åº”ç”¨ç¨‹åºå‡çº§å¤±è´¥ï¼", Toast.LENGTH_LONG).show();
 	} finally {
 		try {
 			if (errIs != null) {
@@ -48,21 +48,21 @@ public static String installInSilently(Context context, File file) {
 	return result;
 }
 #+end_src 
-*** AndroidManifest.xmlÎÄ¼şÌí¼Ópermission
+*** AndroidManifest.xmlæ–‡ä»¶æ·»åŠ permission
 #+begin_src xml
 <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
 <uses-permission android:name="android.permission.DELETE_PACKAGES" />
 #+end_src
-*** Ç©Ãûapk
-    1. ÀûÓÃEclipse´ò°üÎŞÇ©ÃûµÄapk£ºin.apk
-    2. ÏÂÔØandroidÏµÍ³Ô´Âë
-    3. ´Óandroid-source\build\target\product\securityÄ¿Â¼ÏÂ¿½±´³öplatform.pk8¡¢platform.x509.pemÁ½¸öÎÄ¼ş
-    4. ÏÂÔØ»òÕß¿½±´³ösignapk.jarÎÄ¼ş
-    5. ÓÃjava -jar signapk.jar platform.x509.pem platform.pk8 in.apk output.apk
-    6. output.apk¼´ÊÇ¾­¹ıÏµÍ³Ç©ÃûµÄapk
-*** ·¢²¼½øĞĞÁËÏµÍ³Ç©ÃûµÄapk
-** ÏÂÔØandroidÔ´Âë
-¿ÉÒÔÀûÓÃÏÂÃæµÄpython½Å±¾À´ÏÂÔØandroid Ô´Âë
+*** ç­¾åapk
+    1. åˆ©ç”¨Eclipseæ‰“åŒ…æ— ç­¾åçš„apkï¼šin.apk
+    2. ä¸‹è½½androidç³»ç»Ÿæºç 
+    3. ä»android-source\build\target\product\securityç›®å½•ä¸‹æ‹·è´å‡ºplatform.pk8ã€platform.x509.pemä¸¤ä¸ªæ–‡ä»¶
+    4. ä¸‹è½½æˆ–è€…æ‹·è´å‡ºsignapk.jaræ–‡ä»¶
+    5. ç”¨java -jar signapk.jar platform.x509.pem platform.pk8 in.apk output.apk
+    6. output.apkå³æ˜¯ç»è¿‡ç³»ç»Ÿç­¾åçš„apk
+*** å‘å¸ƒè¿›è¡Œäº†ç³»ç»Ÿç­¾åçš„apk
+** ä¸‹è½½androidæºç 
+å¯ä»¥åˆ©ç”¨ä¸‹é¢çš„pythonè„šæœ¬æ¥ä¸‹è½½android æºç 
 #+begin_src python
 import xml.dom.minidom
 import os

@@ -1,31 +1,53 @@
+* 重要
+** Archive							    :ARCHIVE:
+*** DONE 提交长期服务激励报销单和发票
+    CLOSED: [2013-07-29 周一 10:18] DEADLINE: <2013-07-29 周一 09:30>
+    - State "DONE"       from "TODO"       [2013-07-29 周一 10:18]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2013-07-29 周一 10:18
+    :END:
 * FPI 工作								:Fpi:
-** TODO 软件业务部上半年述职[2/3]
-*** TODO 述职[/]
-    DEADLINE: <2013-07-22 周一>
+** 跟胡艳波沟通Android开发的问题
+   SCHEDULED: <2013-07-24 周三>
+** Archive							    :ARCHIVE:
+*** DONE 软件业务部上半年述职[1/1]
+    CLOSED: [2013-07-23 周二 14:16]
+    - State "DONE"       from "TODO"       [2013-07-23 周二 14:16]
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2013-07-23 周二 14:16
+    :END:
+**** DONE 述职[/]
+     CLOSED: [2013-07-23 周二 14:16] DEADLINE: <2013-07-22 周一>
+     - State "DONE"       from "TODO"       [2013-07-23 周二 14:16]
 
-*** Archive							    :ARCHIVE:
-**** DONE 编写述职报告[/]
-     CLOSED: [2013-07-17 周三 17:37] DEADLINE: <2013-07-18 周四>
-     - State "DONE"       from "TODO"       [2013-07-17 周三 17:37]
-     :PROPERTIES:
-     :ARCHIVE_TIME: 2013-07-17 周三 17:38
-     :END:
-**** DONE 跟孙总沟通，看需不需要参加[/]
-     CLOSED: [2013-07-17 周三 17:37]
-     - State "DONE"       from "TODO"       [2013-07-17 周三 17:37]
-     :PROPERTIES:
-     :ARCHIVE_TIME: 2013-07-17 周三 17:38
-     :END:
+**** Archive							    :ARCHIVE:
+***** DONE 编写述职报告[/]
+      CLOSED: [2013-07-17 周三 17:37] DEADLINE: <2013-07-18 周四>
+      - State "DONE"       from "TODO"       [2013-07-17 周三 17:37]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-17 周三 17:38
+      :END:
+***** DONE 跟孙总沟通，看需不需要参加[/]
+      CLOSED: [2013-07-17 周三 17:37]
+      - State "DONE"       from "TODO"       [2013-07-17 周三 17:37]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-17 周三 17:38
+      :END:
 * Mobi Platform							       :Mobi:
 ** 项目开发过程
-*** TODO 解决开发分支、测试分支、生产分支的关系和开发过程	   :Delegate:
-**** 开发分支和测试分支目前暂合并为一个，直接在主干进行开发和测试，同时建立一个基于主干的持续集成服务器，平台开发和测试的runtime皆有该持续集成服务器生成。
-**** 生产运营系统打一个生成分支，该分支独立建立一个持续集成服务器，生成环境的系统的runtime通过该持续集成服务器集成。
-     1. [ ] 独立分支
-     2. [ ] 独立持续集成服务器
-     3. [ ] 每发布一个版本时更新持续集成服务器的源码地址
-** 新需求[1/2]
-*** TODO 完成移动版本和Web版本的点购后台服务的开发
+*** Archive							    :ARCHIVE:
+**** DONE 解决开发分支、测试分支、生产分支的关系和开发过程	   :Delegate:
+     CLOSED: [2013-07-23 周二 14:16]
+     - State "DONE"       from "TODO"       [2013-07-23 周二 14:16]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-07-23 周二 14:16
+     :END:
+***** 开发分支和测试分支目前暂合并为一个，直接在主干进行开发和测试，同时建立一个基于主干的持续集成服务器，平台开发和测试的runtime皆有该持续集成服务器生成。
+***** 生产运营系统打一个生成分支，该分支独立建立一个持续集成服务器，生成环境的系统的runtime通过该持续集成服务器集成。
+      1. [X] 独立分支
+      2. [ ] 独立持续集成服务器
+      3. [X] 每发布一个版本时更新持续集成服务器的源码地址
+** 新需求[1/1]
 *** Archive							    :ARCHIVE:
 **** DONE [#C] 实现Pad应用程序后台静默升级[3/3]
      CLOSED: [2013-07-18 周四 16:11] SCHEDULED: <2013-07-15 周一>
@@ -42,13 +64,13 @@
      :PROPERTIES:
      :ARCHIVE_TIME: 2013-07-19 周五 10:43
      :END:
+**** DONE 完成移动版本和Web版本的点购后台服务的开发
+     CLOSED: [2013-07-23 周二 14:16]
+     - State "DONE"       from "TODO"       [2013-07-23 周二 14:16]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-08-07 周三 17:13
+     :END:
 ** Bug修改[1/2]
-*** TODO 解决”买家停用后，PAD仍能登录并进入系统“的问题
-    SCHEDULED: <2013-07-19 周五>
-*** TODO [#C] mobi-platform-ba-monitor的依赖关系有问题[/]	   :Delegate:
-    DEADLINE: <2013-07-19 周五>
-    mobi-platform-ba-monitor不应该依赖bd-order、bd-model、order-monitor。
-    周冰华本周五解决！
 *** Archive							    :ARCHIVE:
 **** Archive							    :ARCHIVE:
 ***** DONE [#A] 解决未发布商品出现在PAD上的问题[0/0]
@@ -95,11 +117,22 @@
      :PROPERTIES:
      :ARCHIVE_TIME: 2013-07-18 周四 16:34
      :END:
+**** DONE [#C] mobi-platform-ba-monitor的依赖关系有问题[/]	   :Delegate:
+     CLOSED: [2013-07-23 周二 14:17] DEADLINE: <2013-07-19 周五>
+     - State "DONE"       from "TODO"       [2013-07-23 周二 14:17]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-07-23 周二 14:17
+     :END:
+     mobi-platform-ba-monitor不应该依赖bd-order、bd-model、order-monitor。
+     周冰华本周五解决！
+**** TODO 解决”买家停用后，PAD仍能登录并进入系统“的问题
+     SCHEDULED: <2013-07-19 周五>
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-08-07 周三 17:13
+     :END:
 ** Pad端重构[0/1]
-*** 工作 确认Pad端新原型[2/3]
-**** 工作 绘制效果图[2/2]
-***** TODO 检查张利巧绘制的新的点购效果图，并将这个效果图发给孙总和老戴查看
-      DEADLINE: <2013-07-22 周一 11:30>
+*** 工作 确认Pad端新原型[0/1]
+**** 工作 绘制效果图[1/1]
 ***** Archive							    :ARCHIVE:
 ****** DONE 绘制历史订单效果图[/]
        DEADLINE: <2013-07-12 周五 14:00>
@@ -113,13 +146,12 @@
        :PROPERTIES:
        :ARCHIVE_TIME: 2013-07-18 周四 14:41
        :END:
-**** TODO 实现”历史订单“界面（黄彦培、熊志军）[2/3]
-     DEADLINE: <2013-07-17 周三 17:00>
-     - [X] 实现历史订单界面[0/0]
-     - [X] 跟老戴进行沟通确认“进度”需求：[0/0]
-       + 用粗略的时间来计算进度，总的时间=备货时间+预估的受理时间+预估的配送时间
-     - [ ] 跟黄彦培确认是否已经实现
-**** TODO 实现”分类目录“界面（熊志军，黄彦培）
+****** DONE 检查张利巧绘制的新的点购效果图，并将这个效果图发给孙总和老戴查看
+       CLOSED: [2013-07-29 周一 10:18] DEADLINE: <2013-07-22 周一 11:30>
+       - State "DONE"       from "TODO"       [2013-07-29 周一 10:18]
+       :PROPERTIES:
+       :ARCHIVE_TIME: 2013-07-29 周一 10:19
+       :END:
 **** Archive							    :ARCHIVE:
 ***** DONE 跟孙总讨论初步界面要求[/]
       - State "DONE"       from "TODO"       [2013-07-12 周五 10:50]
@@ -138,6 +170,21 @@
       :END:
       讨论需要跳出以前的那种分类框架，也要跳出以前那种一定要把分类显示在pad上的做法，要用更加先进方法来做。
       通过电话跟孙总讨论界面效果图
+***** DONE 实现”历史订单“界面（黄彦培、熊志军）[2/3]
+      CLOSED: [2013-07-23 周二 14:18] DEADLINE: <2013-07-17 周三 17:00>
+      - State "DONE"       from "TODO"       [2013-07-23 周二 14:18]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-23 周二 14:19
+      :END:
+      - [X] 实现历史订单界面[0/0]
+      - [X] 跟老戴进行沟通确认“进度”需求：[0/0]
+       	+ 用粗略的时间来计算进度，总的时间=备货时间+预估的受理时间+预估的配送时间
+      - [ ] 跟黄彦培确认是否已经实现
+***** PENDING 实现”分类目录“界面（熊志军，黄彦培）
+      - State "PENDING"    from "TODO"       [2013-07-29 周一 10:19]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-29 周一 10:19
+      :END:
 ** 其他工作
 *** Archive							    :ARCHIVE:
 **** DONE 找周冰华，让他在www服务器上部署一个测试环境		   :Delegate:
@@ -200,8 +247,21 @@
 ** TODO 学会使用Emacs Org-Mode来进行GTD，首先要学习Org-Mode
 ** TODO 深入了解Git分布式版本管理系统，阅读《Pro.Git-zh_CN》
 * 购房								     :Family:
-** TODO 房子过户
-   
+** Archive							    :ARCHIVE:
+*** TODO 房子过户
+    :PROPERTIES:
+    :ARCHIVE_TIME: 2013-08-07 周三 17:12
+    :END:
+**** Archive							    :ARCHIVE:
+***** DONE 跟中介沟通材料：
+      CLOSED: [2013-07-29 周一 10:20]
+      - State "DONE"       from "TODO"       [2013-07-29 周一 10:20]
+      :PROPERTIES:
+      :ARCHIVE_TIME: 2013-07-29 周一 10:20
+      :END:
+      1. [ ] 夫妻两人身份证、户口本、结婚证
+      2. [ ] 房屋买卖合同要不要？
+      3. [ ] 确认户口情况
 * DONE 测试
   
 * Archive							    :ARCHIVE:

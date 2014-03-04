@@ -1,0 +1,21 @@
+* 项目规划
+** TODO 商品规格
+*** TODO 商品规格Web管理界面					   :Delegate:
+*** Archive							    :ARCHIVE:
+**** DONE 考虑规格的实现方式
+     CLOSED: [2013-08-02 周五 09:57]
+     - State "DONE"       from "TODO"       [2013-08-02 周五 09:57]
+     :PROPERTIES:
+     :ARCHIVE_TIME: 2013-08-02 周五 09:57
+     :END:
+***** DONE 问题，跟孙总确认
+      CLOSED: [2013-08-02 周五 09:57]
+      - State "DONE"       from "TODO"       [2013-08-02 周五 09:57]
+      1. [X] 公共商品模块需要管理规格吗？
+      2. [X] 店铺需要进行规格管理吗？
+      3. [X] 店铺管理公共商品规格的时候怎么搞？可以添加规格吗？
+      4. [X] 商圈只是对规格定价？对公共商品怎么搞？
+** TODO 店铺配送费和起送额跟商圈对应
+*** TODO web管理界面						   :Delegate:
+*** TODO Pad接口，用新的方式读取配送费
+** 新的Pad界面
